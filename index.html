@@ -1,0 +1,474 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="shortcut icon" href="ico.png"/>
+    <script language=Javascript src="jquery-3.2.1.min.js"></script>
+    <meta charset="utf-8"/>
+    <title>Solar System</title>
+  </head>
+
+  <body>
+    <div id="operate_block">
+      <!-- <div id="year_counter"></div> -->
+      <div id="operate_hid">
+        <div id="to_left" class="direct_buttom operate_buttom" onclick="direct(1)"><</div>
+        <div id="to_right" class="direct_buttom operate_buttom" onclick="direct(-1)">></div>
+        <div id="more_big" class="size_buttom operate_buttom" onclick="size(1)">+</div>
+        <div id="more_small" class="size_buttom operate_buttom" onclick="size(-1)">-</div>
+        <div id="introduction_buttom" class="operate_buttom" onclick="intr_tf()">開啟說明</div>
+        <div id="logo" class="size_buttom operate_buttom"><img src="ico.png"></div>
+      </div>
+    </div>
+
+
+
+    <div id="system">
+      <div id="AUblock">
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+        <div class="AU"></div><div class="AU"></div>
+      </div>
+      <div id="sun" class="track">
+        <div class="planet_content">
+          <div class="planet">
+          </div>
+          <div class="introduction_block introduction_style1">
+
+            <div class="planet_pic">
+              <img src="Sun.png">
+
+            </div>
+            <div class="intr_text">
+              <div class="planet_name">
+                Sun<br><mark>太陽</mark>
+              </div>
+              <ul>
+                <li>半徑：695,700km</li>
+                <li>距離銀河系中心：25,000光年</li>
+                <li>自轉週期：25天1時12分</li>
+                <li>公轉週期：2.5億年</li>
+                <li>視星等：-26.74</li>
+                <li>絕對星等：4.83</li>
+                <li></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div id="mercury" class="track">
+        <div class="planet_content">
+          <div class="rerotate">
+            <div class="planet">
+            </div>
+          </div>
+
+          <div class="track_down hid"><div class="track_run"></div></div>
+          <div class="track_top hid"><div class="track_run"></div></div>
+
+          <div class="introduction_block introduction_style1">
+
+            <div class="planet_pic">
+              <img src="Mercury.png">
+
+            </div>
+            <div class="intr_text">
+              <div class="planet_name">
+                Mercury<br><mark>水星</mark>
+              </div>
+              <ul>
+                <li>半徑：2,440km</li>
+                <li>距離太陽：57,910,000km</li>
+                <li>自轉週期：58天15時30分</li>
+                <li>公轉週期：88天</li>
+                <li>衛星數：0</li>
+                <li></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div id="venus" class="track">
+        <div class="planet_content">
+          <div class="rerotate">
+            <div class="planet">
+            </div>
+          </div>
+
+          <div class="track_down hid"><div class="track_run"></div></div>
+          <div class="track_top hid"><div class="track_run"></div></div>
+
+          <div class="introduction_block introduction_style1">
+
+            <div class="planet_pic">
+              <img src="Venus.png">
+
+            </div>
+            <div class="intr_text">
+              <div class="planet_name">
+                Venus<br><mark>金星</mark>
+              </div>
+              <ul>
+                <li>半徑：6,052km</li>
+                <li>距離太陽：108,200,000km</li>
+                <li>自轉週期：116天18時0分</li>
+                <li>公轉週期：225天</li>
+                <li>衛星數：0</li>
+                <li></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div id="earth" class="track">
+        <div class="planet_content">
+          <div class="rerotate">
+            <div class="planet">
+            </div>
+          </div>
+
+          <div class="track_down hid"><div class="track_run"></div></div>
+          <div class="track_top hid"><div class="track_run"></div></div>
+
+          <div class="introduction_block introduction_style1">
+
+            <div class="planet_pic">
+              <img src="Earth.png">
+
+            </div>
+            <div class="intr_text">
+              <div class="planet_name">
+                Earth<br><mark>地球</mark>
+              </div>
+              <ul>
+                <li>半徑：6,371km</li>
+                <li>距離太陽：149,600,000km</li>
+                <li>自轉週期：1天</li>
+                <li>公轉週期：365天</li>
+                <li>衛星數：1</li>
+                <li></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div id="mars" class="track">
+        <div class="planet_content">
+          <div class="rerotate">
+            <div class="planet">
+            </div>
+          </div>
+
+          <div class="track_down hid"><div class="track_run"></div></div>
+          <div class="track_top hid"><div class="track_run"></div></div>
+
+          <div class="introduction_block introduction_style1">
+
+            <div class="planet_pic">
+              <img src="Mars.png">
+
+            </div>
+            <div class="intr_text">
+              <div class="planet_name">
+                Mars<br><mark>火星</mark>
+              </div>
+              <ul>
+                <li>半徑：3,390km</li>
+                <li>距離太陽：227,900,000km</li>
+                <li>自轉週期：1天0時40分</li>
+                <li>公轉週期：687天</li>
+                <li>衛星數：2</li>
+                <li></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div id="asteroid" class="track" style="border-width: 140px;border-style: solid">
+        <div class="planet_content">
+
+
+          <div class="introduction_block introduction_style1">
+
+            <div class="planet_pic">
+              <img src="Asteroid.png">
+
+            </div>
+            <div class="intr_text">
+              <div class="planet_name">
+                Asteroid belt<br><mark>小行星帶</mark>
+              </div>
+              <!-- <ul>
+                <li>半徑：69,911km</li>
+                <li>距離太陽：778,500,000km</li>
+                <li>自轉週期：9時56分</li>
+                <li>公轉週期：12年</li>
+                <li>衛星數：67</li>
+                <li></li>
+              </ul> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div id="jupiter" class="track">
+        <div class="planet_content">
+          <div class="rerotate">
+            <div class="planet">
+            </div>
+          </div>
+
+          <div class="track_down hid"><div class="track_run"></div></div>
+          <div class="track_top hid"><div class="track_run"></div></div>
+
+          <div class="introduction_block introduction_style1">
+
+            <div class="planet_pic">
+              <img src="Jupiter.png">
+
+            </div>
+            <div class="intr_text">
+              <div class="planet_name">
+                Jupiter<br><mark>木星</mark>
+              </div>
+              <ul>
+                <li>半徑：69,911km</li>
+                <li>距離太陽：778,500,000km</li>
+                <li>自轉週期：9時56分</li>
+                <li>公轉週期：12年</li>
+                <li>衛星數：67</li>
+                <li></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div id="saturn" class="track">
+        <div class="planet_content">
+          <div class="rerotate">
+            <div class="planet">
+            </div>
+          </div>
+
+          <div class="track_down hid"><div class="track_run"></div></div>
+          <div class="track_top hid"><div class="track_run"></div></div>
+
+          <div class="introduction_block introduction_style1">
+
+            <div class="planet_pic">
+              <img src="Saturn.png">
+
+            </div>
+            <div class="intr_text">
+              <div class="planet_name">
+                Saturn<br><mark>土星</mark>
+              </div>
+              <ul>
+                <li>半徑：58,232km</li>
+                <li>距離太陽：1,429,000,000km</li>
+                <li>自轉週期：10時42分</li>
+                <li>公轉週期：29年</li>
+                <li>衛星數：62</li>
+                <li></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div id="uranus" class="track">
+        <div class="planet_content">
+          <div class="rerotate">
+            <div class="planet">
+            </div>
+          </div>
+
+          <div class="track_down hid"><div class="track_run"></div></div>
+          <div class="track_top hid"><div class="track_run"></div></div>
+
+          <div class="introduction_block introduction_style2">
+
+            <div class="planet_pic">
+              <img src="Uranus.png">
+
+            </div>
+            <div class="intr_text">
+              <div class="planet_name">
+                uranus<br><mark>天王星</mark>
+              </div>
+              <ul>
+                <li>半徑：25,362km</li>
+                <li>距離太陽：2,871,000,000km</li>
+                <li>自轉週期：17時14分</li>
+                <li>公轉週期：84年</li>
+                <li>衛星數：27</li>
+                <li></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div id="neptunus" class="track">
+        <div class="planet_content">
+          <div class="rerotate">
+            <div class="planet">
+            </div>
+          </div>
+
+          <div class="track_down hid"><div class="track_run"></div></div>
+          <div class="track_top hid"><div class="track_run"></div></div>
+
+          <div class="introduction_block introduction_style2">
+
+            <div class="planet_pic">
+              <img src="Neptunus.png">
+
+            </div>
+            <div class="intr_text">
+              <div class="planet_name">
+                Neptunus<br><mark>海王星</mark>
+              </div>
+              <ul>
+                <li>半徑：24,622km</li>
+                <li>距離太陽：4,498,000,000km</li>
+                <li>自轉週期：16時6分</li>
+                <li>公轉週期：165年</li>
+                <li>衛星數：14</li>
+                <li></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div id="pluto" class="track">
+        <div class="planet_content">
+          <div class="rerotate">
+            <div class="planet">
+            </div>
+          </div>
+
+          <div class="track_down hid"><div class="track_run"></div></div>
+          <div class="track_top hid"><div class="track_run"></div></div>
+
+          <div class="introduction_block introduction_style2">
+
+            <div class="planet_pic">
+              <img src="Pluto.png">
+
+            </div>
+            <div class="intr_text">
+              <div class="planet_name">
+                Pluto<br><mark>冥王星</mark>
+              </div>
+              <ul>
+                <li>半徑：1,187km</li>
+                <li>距離太陽：7,400,000,000km</li>
+                <li>自轉週期：6天9時2分</li>
+                <li>公轉週期：248年</li>
+                <li>衛星數：5</li>
+                <li></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+
+
+
+
+  </body>
+  <script>
+  var system_left = -5500;
+  var system_size = 1;
+  var introduction_boolean = false;
+  var a;
+  var direct = function(dire){
+    if(system_left <= 0 && system_left >= -10000 ){
+      var x = 500;
+      if(system_left == 0 && dire == 1 || system_left == -10000 && dire == -1)x = 0;
+      system_left = system_left + x * dire;
+      $("#system").css("left",system_left + "px");
+    }
+    // console.log(system_left);
+  }
+  var size = function(siz){
+
+    if(system_size <= 2 && system_size >= 0.6 ){
+      var x = 0.1;
+      if(system_size == 2 && siz == 1 || system_size == 0.6 && siz == -1)x = 0;
+      system_size = Number((system_size + x * siz).toFixed(1));
+      $("#system").css("transform","scale(" + system_size +")");
+    }
+    if(system_size >= 1.3){
+      $(".introduction_block").css("transform","scale(0.5)");
+      $(".introduction_style1").css("right","-500px");
+      $(".introduction_style2").css("right","0");
+    }
+    if(system_size <= 0.8){
+      $(".introduction_block").css("transform","scale(1.3)");
+    }
+  }
+  var intr_tf = function(){
+    if(introduction_boolean){
+      $("#introduction_buttom").text("開啟說明");
+    }else{
+      $("#introduction_buttom"
+    ).text("關閉說明");
+    }
+    introduction_boolean = !introduction_boolean;
+    console.log(introduction_boolean);
+  }
+  var introduction_block_show = function(){
+    if(introduction_boolean)$(this).find(".introduction_block").css("display","block");
+  }
+  var introduction_block_hide = function(){
+    if(introduction_boolean)$(this).find(".introduction_block").css("display","none");
+  }
+  $(".track").mouseover(introduction_block_show);
+  $(".track").mouseleave(introduction_block_hide);
+
+  </script>
+
+</html>
+>
